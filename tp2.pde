@@ -1,3 +1,5 @@
+//Castellanos Carla Abril - Legajo 79555/8 - Comision 3 - TP N°2 Secuencia de Creditos
+
 PImage logo, personajes1;
 PFont creditos, personajesmk1, personajesmk2, musiccred, fotografia, montaje,direccion,produccion;
 float posXfoto, posYfoto, opacidad, colortext1, colortext2,colortext3,posrect1,posrect2,efectcred,direc;
