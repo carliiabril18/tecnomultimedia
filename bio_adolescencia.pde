@@ -9,7 +9,7 @@ void bio_adolescencia(){
   
   imageMode(CENTER);
   image (adolescencia, width/2, 420, 800,390);
-  image (student, 400, 470, 100, 250);
+  image (student, 510, 470, 100, 250);
   
   rectMode(CENTER);
   fill (255,0,255);
