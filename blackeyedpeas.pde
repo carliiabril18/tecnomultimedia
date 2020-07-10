@@ -34,19 +34,26 @@ rectMode(CENTER);
 fill(255);
 stroke(255,35,1);
 strokeWeight(2);
-rect(width/2,550,140,40);
+rect(700,550,140,40);
 textSize(24);
 fill(255,35,1);
-text("Siguiente", width/2,555);
+text("Siguiente", 700,555);
+
+rectMode(CENTER);
+fill(255);
+stroke(255,35,1);
+strokeWeight(2);
+rect(100,550,180,40);
+textSize(24);
+fill(255,35,1);
+text("Volver al Menu", 100,555);
 }
 
 void clickBEP(){
   if(mouseX>400-60 && mouseX<400+60 && mouseY>555-20 && mouseY<555+20 ){
     estado=13;
   }
-}
-void volverMenu2(){
-   if (keyCode==LEFT){
+    if( mouseX>100-60 && mouseX<100+60 && mouseY>555-20 && mouseY<555+20 ){
     estado=6;
-   }
+  }
 }
