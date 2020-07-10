@@ -57,11 +57,13 @@ void mousePressed(){
   }else if (estado==7){
     clickPaseaBanda1();
   }else if (estado==8){
-    clickBTS();
+    clickPaseaBanda2();
   }else if (estado==9){
     clickPaseaBanda3();
   }else if (estado==10){
     clickoneDirection();
+  }else if (estado==11){
+    clickBTS();
   }else if (estado==12){
     clickBEP();
   }else if (estado==13){
@@ -69,8 +71,3 @@ void mousePressed(){
   }
 }
 
-void keyPressed(){
-  paseaBanda2();   volverMenu();
-  
-  volverMenu2();
-}
