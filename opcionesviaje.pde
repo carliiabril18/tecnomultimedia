@@ -1,15 +1,5 @@
 void opcionesviaje(){
   
-PImage usa, corea, inglaterra, atlas;
-PFont opciones, botones4;
-
-usa= loadImage("EUA.png");
-corea= loadImage("CoreaDelSur.png");
-inglaterra= loadImage("GBR.png");
-atlas= loadImage("atlas.jpg");
-opciones= loadFont("Algerian-48.vlw");
-botones4= loadFont("KeepCalm-Medium-48.vlw");
-
 image(atlas, width/2, height/2, 800,600);
 image(inglaterra, 100, 250, 150, 150);
 image(corea, width/2, 400, 150, 150);
