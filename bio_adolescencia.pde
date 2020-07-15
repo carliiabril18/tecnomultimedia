@@ -1,12 +1,5 @@
 void bio_adolescencia(){
 
-  PImage adolescencia, student;
-  PFont teenager;
-  
-  adolescencia= loadImage("facultad.jpg");
-  student= loadImage("estudiante.png");
-  teenager= loadFont("KeepCalm-Medium-48.vlw");
-  
   imageMode(CENTER);
   image (adolescencia, width/2, 420, 800,390);
   image (student, 510, 470, 100, 250);
