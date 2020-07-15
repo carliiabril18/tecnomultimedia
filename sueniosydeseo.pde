@@ -1,13 +1,5 @@
 void sueniosydeseo(){
 
-  PImage travel, periodista;
-  PFont viaje, botones3;
-  
-  travel= loadImage("mundo.jpg");
-  periodista= loadImage("periodista.png");
-  viaje= loadFont("Philosopher-48.vlw");
-  botones3= loadFont("KeepCalm-Medium-48.vlw");
-  
   imageMode(CENTER);
   image (travel, width/2, height/2, 800,600);
   image (periodista, 400, 420, 150, 370);
