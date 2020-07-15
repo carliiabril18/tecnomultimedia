@@ -1,11 +1,4 @@
 void bio_ninez(){
-
-  PImage infancia, babycharacter;
-  PFont childhood;
-  
-  infancia= loadImage("infancia.jpg");
-  babycharacter= loadImage("chiquita.jpg");
-  childhood= loadFont("KeepCalm-Medium-48.vlw");
   
   imageMode(CENTER);
   image (infancia, width/2, height/2,800,600);
