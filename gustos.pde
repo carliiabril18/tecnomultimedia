@@ -1,21 +1,5 @@
 void gustos(){
 
-  PImage musica, musica2, fotografia, libros, tv, pc, cafe, protagonista, fondo;
-  PFont tastes, tastes2, botones;
-  
-  musica= loadImage("headphones.png");
-  musica2= loadImage("music.png");
-  fotografia= loadImage("camara.png");
-  libros= loadImage("libros.png");
-  tv= loadImage("netflix.png");
-  pc= loadImage("laptop.png");
-  cafe= loadImage("starbucks_arg.png");
-  protagonista= loadImage("adolescente.jpg");
-  fondo= loadImage("gustos.jpg");
-  tastes= createFont("CHOWFUN_.TTF", 48);
-  tastes2= loadFont("ArialMT-48.vlw");
-  botones= loadFont("KeepCalm-Medium-48.vlw");
-    
   imageMode(CENTER);
   image (fondo, width/2, height/2, 800, 600);
   image (musica2, 240, 105, 70, 120);
@@ -25,7 +9,7 @@ void gustos(){
   image (tv, 750, 240, 120, 120);
   image (pc, 210, 420, 200, 130);
   image (cafe, 580, 420, 100, 160);
-  image (protagonista, width/2, 280, 240, 300);
+  image (protagonista2, width/2, 280, 240, 300);
   
   textAlign (CENTER);
   fill(160, 0, 255);
