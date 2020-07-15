@@ -1,20 +1,4 @@
 void usa(){
-  
-PImage losangelescity;
-PFont eeuu, botones5, relato;
-int textposy1, textposy2,textposy3, textposy4, textposy5, textposy6, textposy7;
-
-losangelescity = loadImage("losangelescity.jpg");
-eeuu = loadFont("LokiCola-48.vlw");
-botones5 = loadFont("KeepCalm-Medium-48.vlw");
-relato = loadFont("PoetsenOne-Regular-48.vlw");
-textposy1= 200;
-textposy2= 250;
-textposy3= 300; 
-textposy4= 350;
-textposy5= 400;
-textposy6= 450;
-textposy7= 500;
 
 image (losangelescity, width/2, height/2, 800,600);
 
@@ -58,14 +42,14 @@ rect(width/2, 330, 750,320);
 fill(0,0,255);
 textFont(relato);
 textSize(16);
-text ("La industria musical de la ciudad es una de las mas importantes, con reconocimiento\n internacional. Comenzo su desarrollo con el cine sonoro en la decada de 1920 y le siguio la", width/2, textposy1);
-text ("fundacion de compañias discograficas orientadas a los distintos generos musicales como el\n jazz, el rhythm & blues, el rock and roll, el rap y con todos sus derivados. El edificio de Capitol", width/2, textposy2-10);
-text ("Records es uno de los iconos arquitectonicos de la ciudad.", width/2, textposy3-20);
+text ("La industria musical de la ciudad es una de las mas importantes, con reconocimiento\n internacional. Comenzo su desarrollo con el cine sonoro en la decada de 1920 y le siguio la", width/2, textposy10);
+text ("fundacion de compañias discograficas orientadas a los distintos generos musicales como el\n jazz, el rhythm & blues, el rock and roll, el rap y con todos sus derivados. El edificio de Capitol", width/2, textposy11-10);
+text ("Records es uno de los iconos arquitectonicos de la ciudad.", width/2, textposy12-20);
 fill(0);
-text ("En la ciudad nacieron los jazzistas Charles Mingus, Chico Hamilton, Eric Dolphy y\n Dexter Gordon. Bandas como Metallica, Guns N Roses, Motley Crue, Megadeth, The Doors,",width/2,textposy4);
-text ("The Byrds, Red Hot Chili Peppers, Maroon 5, Black Eyed Peas, System of a Down, Suicidal\n Tendencies, Linkin Park, Rage Against the Machine, Thirty Seconds to Mars y Body Count,", width/2, textposy5-10);
-text ("fueron fundadas en Los Angeles, mientras que The Beach Boys, Slayer o Van Halen provienen\n de ciudades cercanas. Los raperos Dr. Dre y Ice Cube son angelinos y Snoop Dogg proviene de", width/2, textposy6-20);
-text ("las cercanias, al igual que la interprete pop Katy Perry oriunda de Santa Barbara.",width/2, textposy7-30);
+text ("En la ciudad nacieron los jazzistas Charles Mingus, Chico Hamilton, Eric Dolphy y\n Dexter Gordon. Bandas como Metallica, Guns N Roses, Motley Crue, Megadeth, The Doors,",width/2,textposy13);
+text ("The Byrds, Red Hot Chili Peppers, Maroon 5, Black Eyed Peas, System of a Down, Suicidal\n Tendencies, Linkin Park, Rage Against the Machine, Thirty Seconds to Mars y Body Count,", width/2, textposy14-10);
+text ("fueron fundadas en Los Angeles, mientras que The Beach Boys, Slayer o Van Halen provienen\n de ciudades cercanas. Los raperos Dr. Dre y Ice Cube son angelinos y Snoop Dogg proviene de", width/2, textposy15-20);
+text ("las cercanias, al igual que la interprete pop Katy Perry oriunda de Santa Barbara.",width/2, textposy16-30);
 
  rectMode(CENTER);
   fill(255);
