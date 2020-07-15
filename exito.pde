@@ -1,11 +1,5 @@
 void exito(){
   
-  PImage fin;
-  PFont boton;
-  
-  fin= loadImage("exito.jpg");
-  boton= loadFont("MagicSound-48.vlw");
-  
   image (fin, width/2, height/2, 800,600);
   
   textAlign(CENTER);
