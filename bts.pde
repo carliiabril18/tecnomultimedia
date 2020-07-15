@@ -40,16 +40,6 @@ textSize(24);
 fill(255,255,0);
 text("Siguiente", 700 ,555);
 }
-
-void clickBTS(){
-   if( mouseX>700-60 && mouseX<700+60 && mouseY>555-20 && mouseY<555+20 ){
-    estado=13;
-  }
-  if( mouseX>100-60 && mouseX<100+60 && mouseY>555-20 && mouseY<555+20 ){
-    estado=6;
-   }
-}
-
 void clickBTS(){
    if( mouseX>700-60 && mouseX<700+60 && mouseY>555-20 && mouseY<555+20 ){
     estado=13;
