@@ -1,13 +1,5 @@
 void bio(){
-
-  PImage ciudad, protagonista1;
-  PFont story;
   
-  ciudad= loadImage("gunpo.jpg");
-  protagonista1= loadImage("biogirl.png");
-  story= loadFont("KeepCalm-Medium-48.vlw");
-  
-    
   imageMode(CENTER);
   image (ciudad, width/2, height/2);
   image (protagonista1, 230, 320, 180, 540);
