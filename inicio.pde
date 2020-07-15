@@ -1,13 +1,4 @@
 void inicio(){
-
-PImage portada, protagonista;
-PFont titulo, botones2;
-
-portada= loadImage("portada.jpg");
-protagonista= loadImage("inicio.png");
-titulo= createFont("Dekiru.ttf", 54);
-botones2= loadFont("KeepCalm-Medium-48.vlw"); 
-  
   imageMode(CENTER);
   image (portada, width/2, height/2, 800,600);
   image (protagonista, width/2, 395, 340,410);
