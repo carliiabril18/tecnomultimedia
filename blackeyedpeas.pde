@@ -1,12 +1,4 @@
 void blackeyedpeas(){
-  
-PImage bep, banda3;
-PFont banda03, bandstory3;
-
-bep= loadImage("los angeles.jpg");
-banda3= loadImage("black eyed peas.png");
-banda03= loadFont("Xirod-Regular-48.vlw");
-bandstory3= loadFont("KeepCalm-Medium-48.vlw");
 
 image(bep, width/2, height/2, 800, 600);
 image(banda3, width/2, 150, 400,300);
@@ -35,7 +27,7 @@ fill(255);
 stroke(255,35,1);
 strokeWeight(2);
 rect(700,550,140,40);
-textSize(24);
+textSize(22);
 fill(255,35,1);
 text("Siguiente", 700,555);
 
@@ -44,13 +36,13 @@ fill(255);
 stroke(255,35,1);
 strokeWeight(2);
 rect(100,550,180,40);
-textSize(24);
+textSize(22);
 fill(255,35,1);
 text("Volver al Menu", 100,555);
 }
 
 void clickBEP(){
-  if(mouseX>400-60 && mouseX<400+60 && mouseY>555-20 && mouseY<555+20 ){
+  if(mouseX>700-60 && mouseX<700+60 && mouseY>555-20 && mouseY<555+20 ){
     estado=13;
   }
     if( mouseX>100-60 && mouseX<100+60 && mouseY>555-20 && mouseY<555+20 ){
