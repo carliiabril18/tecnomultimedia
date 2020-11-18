@@ -18,20 +18,20 @@ class Juego {
     vidas= 5;
     cant_stars= 10;
     cant_hates= 10;
-    
+
     star= new Obstaculo1();
     hate= new Obstaculo2();
-    
+
     pantallas= new PantallasJuego();
-    
+
     stars= new Obstaculo1[cant_stars];
     hates= new Obstaculo2[cant_hates];
-    
+
     boton1= new Boton(width/2, 650, 160, 40, "¿Como Jugar?");
     boton2= new Boton(width/2, 650, 160, 40, "Empezar a Jugar");
     boton3= new Boton(800, 800, 160, 40, "Ir al Inicio");
     boton4= new Boton(800, 800, 160, 40, "Volver a Jugar");
-    
+
     estado="inicio";
 
     stars = new Obstaculo1[cant_stars];
@@ -48,6 +48,8 @@ class Juego {
     dibujarpantallas();
   }
   void dibujo() {
+    background(255);
+    noFill();
     imageMode(CENTER);
     image(Escenario, width/2, height/2, displayWidth, displayHeight);
     fill(0);
@@ -56,25 +58,17 @@ class Juego {
     text ("Vidas: " + vidas, 100, 100);
     star.actualizar();
     hate.actualizar();
-
-    if (puntos>=10) {
-      pantallas.dibujarvictoria("ganaste");
-    }
-
-    if (vidas<=0) {
-      pantallas.dibujarderrota("perdiste");
-    }
   }
   void CambioEstado(String e_) {
     estado=e_;
   } 
   void dibujarpantallas() {
     if (estado.equals("inicio")) {
-      pantallas.dibujarinicio("inicio");
+      pantallas.dibujarinicio();
       boton1.dibujar();
     }
     if (estado.equals("tutorial")) {
-      pantallas.dibujartutorial("tutorial");
+      pantallas.dibujartutorial();
       boton2.dibujar();
     } 
     if (estado.equals("juego")) {
@@ -87,37 +81,42 @@ class Juego {
       }
     } 
     if (estado.equals("ganaste")) {
-      pantallas.dibujarvictoria("ganaste");
+      pantallas.dibujarvictoria();
       boton3.dibujar();
     }
     if (estado.equals("perdiste")) {
-      pantallas.dibujarderrota("perdiste");
+      pantallas.dibujarderrota();
       boton4.dibujar();
     }
   }
   void mousePressed() {
     if (boton1.botonPress(width/2, 650, 160, 40, "¿Como Jugar?")&& estado.equals("inicio")) {
-      pantallas.dibujartutorial("tutorial");
+      estado= "tutorial";
     } else if (boton2.botonPress(width/2, 650, 160, 40, "Empezar a Jugar")&& estado.equals("tutorial")) {
       estado="juego";
       juego.dibujo();
       for (int i=0; i<cant_stars; i++ ) {
         stars[i].clickear();
+        if (stars[i].clickear()==false) {
+          puntos= puntos+1;
+        }
+        if (puntos>=10) {
+          CambioEstado("ganaste");
+        }
       }
       for (int i=0; i<cant_hates; i++ ) {
         hates[i].clickear();
+        if (hates[i].clickear()==false) {
+          vidas= vidas-1;
+        }
+        if (vidas<=0) {
+          CambioEstado("perdiste");
+        }
       }
     } else if (boton3.botonPress(width/2, 650, 160, 40, "Ir al Inicio")&& estado.equals("ganaste")) {
-      pantallas.dibujarinicio("inicio");
+      estado="inicio";
     } else if (boton4.botonPress(width/2, 650, 160, 40, "Volver a Jugar")&& estado.equals("perdiste")) {
-      estado="juego";
-      juego.dibujo();
-      for (int i=0; i<cant_stars; i++ ) {
-        stars[i].clickear();
-      }
-      for (int i=0; i<cant_hates; i++ ) {
-        hates[i].clickear();
-      }
+      juego= new Juego();
     }
   }
 }
