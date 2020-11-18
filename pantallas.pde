@@ -1,5 +1,5 @@
 class PantallasJuego {
-  String estado;
+
   PImage inicio, introduccion, victoria, derrota, chicaportada, chicaimagen;
 
   PantallasJuego() {
@@ -10,25 +10,19 @@ class PantallasJuego {
     victoria= loadImage("victoria.jpg");
     derrota= loadImage("derrota.jpg");
   }
-  void dibujarinicio(String estado1) { //pantalla de inicio
+  void dibujarinicio() { //pantalla de inicio
     imageMode(CENTER);
     image (inicio, width/2, height/2, displayWidth, displayHeight);
     image (chicaportada, width/2, height/2);//
-    juego.CambioEstado(estado1);
   }
-
-  void dibujartutorial(String estado2) {//pantalla tutorial
-    image (introduccion,  width/2, height/2, displayWidth, displayHeight);
+  void dibujartutorial() {//pantalla tutorial
+    image (introduccion, width/2, height/2, displayWidth, displayHeight);
     image (chicaimagen, 200, 250);
-    juego.CambioEstado(estado2);
   }
-
-  void dibujarvictoria(String estado4) { //pantalla ganaste
-    image(victoria,  width/2, height/2, displayWidth, displayHeight);
-    juego.CambioEstado(estado4);
+  void dibujarvictoria() { //pantalla ganaste
+    image(victoria, width/2, height/2, displayWidth, displayHeight);
   }
-  void dibujarderrota(String estado5) {//pantalla perdiste
+  void dibujarderrota() {//pantalla perdiste
     image(derrota, width/2, height/2, displayWidth, displayHeight);
-    juego.CambioEstado(estado5);
   }
 }
