@@ -4,7 +4,6 @@ class Obstaculo1 {
   float direccion, velocidad;
   boolean vida;
   PImage star;
-  int puntos, cant_stars;
   //constructor:
   Obstaculo1() {
     star= loadImage("star1.png");
@@ -14,15 +13,13 @@ class Obstaculo1 {
     direccion = random(TWO_PI);
     velocidad = 1;
     vida = true;
-    puntos= 0;
-    cant_stars= 10;
   }
 
   //metodos:
   void actualizar() {
     mover();
     dibujar();
-    }
+  }
 
   void mover() {
     if (vida==true) {
@@ -49,18 +46,9 @@ class Obstaculo1 {
       }
     }
   }
-  void clickear() {
-    if (mouseX>posicionx&&mouseX<100+posicionx&&mouseY>posiciony&&mouseY<100+posiciony) {
-      vida=false;
-      puntos = puntos+1;
-    }
-  }
-
-
   void dibujar() {
-    if (vida) {
-      image(star, posicionx, posiciony, 100, 100);
-    }
+    image(star, posicionx, posiciony, 100, 100);
+
     pushMatrix();
     pushStyle();
     translate(posicionx, posiciony); 
@@ -70,8 +58,12 @@ class Obstaculo1 {
     popStyle();
     popMatrix();
   }
-    void reciclar() {
-    posiciony= random(-100, -tam/2);
+  boolean clickear() {
+    if (mouseX>posicionx&&mouseX<(100+posicionx)/2&&mouseY>posiciony&&mouseY<(100+posiciony)/2) {
+      return vida= false;
+    } else {
+      return vida;
+    }
   }
 }
 //-----------------------------------------------------------------------------------
@@ -80,7 +72,6 @@ class Obstaculo2 {
   float posx, posy, rad, despX, despY, tam;
   float direccion, velocidad;
   boolean vida;
-  int vidas, cant_hates;
   PImage hate;
 
   //constructor:
@@ -91,8 +82,7 @@ class Obstaculo2 {
     posy = random(rad, height-rad);
     direccion = random(TWO_PI);
     velocidad = 3;
-    vida = true;
-    vidas= 5;
+    vida= true;
   }
 
   //metodos:
@@ -126,21 +116,14 @@ class Obstaculo2 {
       }
     }
   }
-  void clickear() {
-    if (mouseX>100&&mouseX<100+posx&&mouseY>100&&mouseY<100+posy) {
-      vida=false;
-      vidas= vidas-1;
-    }
-  }
-
   void dibujar() {
     if (vida) {
       image(hate, posx, posy, 100, 100);
     }
     pushMatrix();
     pushStyle();
+    background(255);
     translate(posx, posy); 
-
     if (vida) {
       fill(255, 0, 0);
     } else {
@@ -150,4 +133,12 @@ class Obstaculo2 {
     popStyle();
     popMatrix();
   }
+  boolean clickear() {
+    if (mouseX>posx&&mouseX<100+posx&&mouseY>posy&&mouseY<100+posy) {
+      return vida= false;
+    } else {
+      return vida;
+    }
+  }
 }
+
