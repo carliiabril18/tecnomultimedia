@@ -1,6 +1,7 @@
 //Castellanos, Carla Abril - Legajo 79555/8
 //Tecnologia Multimedial 1 - Cursada Complementaria de Verano
-//For y Condicionales
+//Repaso Ciclo For
+
 float a1;
 float a2;
 int cantEllipse;
